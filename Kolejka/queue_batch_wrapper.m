@@ -20,10 +20,10 @@ output{1,3} = [];
 parfor i = 1:n,
     tic
     [ lost lostvec Xvec ] = queue( A, b(i), c(i) );
-    toc
     disp('-----------------------------------')
     disp(['Run = ', num2str(i) , '/', num2str(n), ' B = ', num2str(b(i)), ' C = ', num2str(c(i))]);
     disp(['Packet lost: ', num2str(lost)]);
+    toc
     output{i,3} = {lost lostvec Xvec};
 end
 
