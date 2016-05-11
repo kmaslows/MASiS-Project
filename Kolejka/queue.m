@@ -82,4 +82,5 @@ end
 % Trim output variabless
 Lvec = Lvec(1:Lcounter,:);
 Xvec = Xvec(1:Xcounter,:);
+end
 

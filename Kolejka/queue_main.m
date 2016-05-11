@@ -1,4 +1,5 @@
 close all; clear all;
+addpath(genpath('../Raw-data'));
 data = load('ispdsl.mat');
 A = data.ispdsl;
 %A = A(A(:,3)==1, :);
