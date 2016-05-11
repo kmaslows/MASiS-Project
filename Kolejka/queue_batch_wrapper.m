@@ -14,8 +14,10 @@ n = length(B)*length(C);
 b = b(:);
 c = c(:);
 output = num2cell([b c]);
-output{1,3} = [];
-
+%output{1,3} = [];
+output_lost = {};
+output_lostvec = {};
+output_Xvec = {};
 %% Run
 parfor i = 1:n,
     tic
@@ -24,7 +26,11 @@ parfor i = 1:n,
     disp(['Run = ', num2str(i) , '/', num2str(n), ' B = ', num2str(b(i)), ' C = ', num2str(c(i))]);
     disp(['Packet lost: ', num2str(lost)]);
     toc
-    output{i,3} = {lost lostvec Xvec};
+    output_lost(i) = {lost};
+    output_lostvec(i) =  {lostvec};
+    output_Xvec(i) = {Xvec};
 end
+
+output = [output output_lost' output_lostvec' output_Xvec'];
 
 end
