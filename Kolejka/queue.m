@@ -20,10 +20,12 @@ Bvec = zeros(B,3);
 Bhead = 1;
 Btail = 1;
 
+An = length(A);
+
 %% Main loop
 while 1
     if X == 0 % if buffer empty
-        if n == length(A)
+        if n == An
             %End simulation. No more data.
             break
         end
@@ -47,7 +49,7 @@ while 1
     
     % Calculate time at which the packet will be fully sent
     tsent = t + (p(2)/C);
-    while n ~= length(A)
+    while n ~= An
         % Get next packet
         n = n + 1;
         pnext = A(n,:);
