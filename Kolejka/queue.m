@@ -16,7 +16,7 @@ Lcounter = 0;
 % Pre allocate lost buffer
 Lvec = zeros(length(A),length(A(1,:)));
 % Allocate buffer
-Bvec = zeros(B,3);
+Bvec = zeros(B,size(A,2));
 Bhead = 1;
 Btail = 1;
 
