@@ -25,7 +25,7 @@ X = data(:,1);
 Y = data(:,2);
 Z = data(:,3);
 
-Z1 = ones(1,length(Z)) * 0.35;
+Z1 = ones(1,length(Z)) * 0.9;
 
 Xn = numel(unique(X));
 Yn = numel(unique(Y));
@@ -36,8 +36,8 @@ ZZ = reshape(Z,Xn,Yn);
 ZZ1 = reshape(Z1,Xn,Yn);
 
 hold on
-surf(XX,YY,ZZ1)
 surf(XX,YY,ZZ)
+surf(XX,YY,ZZ1)
 xlabel('Probability of G->B transfer')
 ylabel('Probability of B->G transfer')
 zlabel('# packet lost')

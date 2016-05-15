@@ -1,11 +1,17 @@
-function [ theo_pack_loss_rate, packets ] = gilbert2( p, r, total_packs )
+function [ theo_pack_loss_rate ] = gilbertdata( p, r, A )
 %GILBERT2 Summary of this function goes here
 %   Detailed explanation goes here
 
-%todo: check?
-check = 100;
 
-while check >= 10
+
+
+
+
+
+%todo: check?
+%check = 100;
+
+%while check >= 10
 
 good = 1;
 packets = [];
@@ -33,13 +39,15 @@ received_packs = nnz(packets);
 theo_pack_loss_rate = 1 - r / (p+r);
 act_pack_loss_rate = 1 - received_packs/total_packs;
 
-check = abs(theo_pack_loss_rate - act_pack_loss_rate) / theo_pack_loss_rate * 100;
+%check = abs(theo_pack_loss_rate - act_pack_loss_rate) / theo_pack_loss_rate * 100;
 
-end
+%end
 
 %todo
-theo_pack_loss_rate = p / (p+r);
-act_pack_loss_rate = 1 - received_packs/total_packs;
+%theo_pack_loss_rate = p / (p+r);
+%act_pack_loss_rate = 1 - received_packs/total_packs;
 
 end
+
+
 
