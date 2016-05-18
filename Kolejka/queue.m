@@ -1,4 +1,4 @@
-function [ Lcounter Lvec Xvec Dropped] = queue( A, B, C )
+function [ Lcounter Lvec Xvec] = queue( A, B, C )
 
 %% Initialize 
 % Set initial data iterator
@@ -19,8 +19,6 @@ Lvec = zeros(length(A),length(A(1,:)));
 Bvec = zeros(B,size(A,2));
 Bhead = 1;
 Btail = 1;
-% Dropped packet vector
-Dropped = [];
 
 An = length(A);
 
@@ -68,7 +66,6 @@ while 1
                     Btail = Btail + 1;
                 end
                 % Output buffer status
-                Dropped(end+1) = n;
                 Xcounter = Xcounter + 1;
                 Xvec(Xcounter,:) = [t X] ;
             else
