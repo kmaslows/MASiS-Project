@@ -1,0 +1,1 @@
+A = [zeros(1,62) 1 1 zeros(1,17) 1 zeros(1,46) 1 1 0 1 0 1 1 1 zeros(1,11) 1 1 zeros(1,15) 1 zeros(1,42) 1 zeros(1,28) 1 1 zeros(1,90) 1 zeros(1,37) 1 1 zeros(1,5) 1 0 0 1 zeros(1,35) 1 0 1 1 0 1 zeros(1,23) 1 1 zeros(1,4) 1 zeros(1,18) 1 zeros(1,15) 1 1 0 1 1 1 0 1 1 0 1 1 1 zeros(1,5)];
