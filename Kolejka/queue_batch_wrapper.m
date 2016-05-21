@@ -27,8 +27,8 @@ parfor (i = 1:n),
     disp(['Packet lost: ', num2str(output_lost{i})])
     lost_indexes = output_lostvec{i}(:,4);
     if ~isempty(lost_indexes)
-    [r,h,p] = gilbert_packets(lost_indexes, length(A));
-    disp(['Gilbert: ', 'r=' , num2str(r), ' h=', num2str(h), ' p=', num2str(p)]);
+        [r,h,p] = gilbert_packets(lost_indexes, length(A));
+        disp(['Gilbert: ', 'r=' , num2str(r), ' h=', num2str(h), ' p=', num2str(p)]);
     end
     toc
 end
