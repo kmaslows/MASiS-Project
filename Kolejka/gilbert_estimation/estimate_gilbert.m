@@ -19,8 +19,8 @@ b = number_of_double_ones/number_of_ones;
 c = number_of_triple_ones/(number_of_triple_ones+number_of_one_o_ones);
 
 % avoid c by assuming h=0.5
-%h = 1
-%r = 1-2*b
+%h = 0.5;
+%r = 1-2*b;
 
 r = 1-(a*c-b*b)/(2*a*c-b*(a+c));
 h = 1-b/(1-r);
