@@ -2,11 +2,11 @@ function [ r h p ] = estimate_gilbert( A )
 %ESTIMATE_GILBERT Summary of this function goes here
 % A - stream of zeros and ones; 1 - packet lost; 0 - packet forwarded
 
-P = findstr(A,[1 0]);
-R = findstr(A,[0 1]);
+P = findstr(A,[0 0]);
+R = findstr(A,[1 1]);
 
-p = length(P)/length(A);
-r = length(R)/length(A);
+p = 1-length(P)/length(A);
+r = 1-length(R)/length(A);
 h = 0;
 
 %total_length = length(A);
