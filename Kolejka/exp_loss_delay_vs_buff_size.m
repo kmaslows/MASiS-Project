@@ -24,6 +24,7 @@ yy = [];
 for i = 1:n,
    lost_packets_vec = output{i,4};
    lost_signal_indexes = lost_packets_vec(:,3) == 1;
+   gilbert_signal_estimate(lost_packets_vec(find(lost_packets_vec(:,3) == 1),:));
    yy(i) = sum(lost_signal_indexes);
    avg_delay(i) = mean(get_delays(lost_packets_vec));
    avg_delay_signal(i) = mean(get_delays(lost_packets_vec(lost_signal_indexes,:)));
