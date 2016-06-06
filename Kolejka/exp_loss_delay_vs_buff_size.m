@@ -1,5 +1,6 @@
 close all; clear all;
 addpath(genpath('../Raw-data'));
+addpath(genpath('gilbert_estimation'));
 
 % Set buffor sizes
 B = 1:4:40;
