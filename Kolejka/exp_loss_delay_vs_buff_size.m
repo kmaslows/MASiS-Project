@@ -10,10 +10,10 @@ Cn = 10;
 C = linspace(Cmin,Cmax,Cn);
 
 % Load and prepare data
-A = mixer('ispdsl.mat','teledysk4080p_filtered_odciete.pcapng.csv');
+A = mixer('ispdsl.mat','vncfiltered_odciete.pcapng.csv');
 
 output = queue_batch_wrapper( A, B, C );
-save('exp-ispdsl-teledysk4080p_filtered_odciete.mat','output','-v7.3');
+save('exp-ispdsl-vncfiltered_odciete.pcapng.mat','output','-v7.3');
 x = cell2mat(output(:,1));
 y = cell2mat(output(:,3));
 
