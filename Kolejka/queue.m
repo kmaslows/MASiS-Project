@@ -1,4 +1,4 @@
-function [ Lcounter Lvec Xvec ] = queue( A, B, C )
+function [ Lcounter Lvec Xvec] = queue( A, B, C )
 
 %% Initialize 
 % Set initial data iterator
